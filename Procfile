@@ -1,1 +1,1 @@
-web: gunicorn biasfree-news-extension:app
+web: gunicorn app:app
