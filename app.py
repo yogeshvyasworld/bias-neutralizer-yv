@@ -13,7 +13,7 @@ GROQ_KEY = os.environ.get("GROQ_API_KEY")
 yv_llm = LLM(model="groq/llama-3.3-70b-versatile", api_key=GROQ_KEY)
 
 
-def run_bias_crew(article_text):
+def run_bias_crew(content):
     
     # Define the Agent
     auditor = Agent(
@@ -72,6 +72,7 @@ def process():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
+
 
 
 
